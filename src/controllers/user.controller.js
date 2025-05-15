@@ -10,7 +10,7 @@ class UserControllers {
         const { userName, password } = req.body
         try {
             const userExists = await userModel.findOne({ userName })
-            if (userExists) return res.status(400).json({ message: "User name already exists" })
+            if (userExists && String(userExists.userName).toLowerCase() === String(userName).toLowerCase()) return res.status(400).json({ message: "User name already exists" })
             const hashPass = await bcrypt.hash(password, 10)
             const userData = await userModel.create({ userName, password: hashPass })
             const userDto = userDTO(userData)
