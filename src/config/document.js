@@ -77,14 +77,14 @@ export const documentApi = `
 
   <header>
     <h1>📚 Books API Documentation</h1>
-    <p>Base URL: <code>https://bookshelf-api-sigma.vercel.app/api</code></p>
+    <p>Base URL: <code>https://bookshelf-api-production-b818.up.railway.app/api</code></p>
   </header>
 
   <section>
     <h2>Books</h2>
 
     <div class="endpoint">
-      <h3>GET <a href="https://bookshelf-api-sigma.vercel.app/api/books/get" target="_blank">/books/get</a></h3>
+      <h3>GET <a href="https://bookshelf-api-production-b818.up.railway.app/api/books/get" target="_blank">/books/get</a></h3>
       <p>Returns a list of all books. <span class="note">Authentication required</span></p>
       <div class="headers">
         Header: <br>
@@ -113,7 +113,7 @@ export const documentApi = `
     </div>
 
     <div class="endpoint">
-      <h3>GET <a href="https://bookshelf-api-sigma.vercel.app/api/books/get-one/:id" target="_blank">/books/get-one/:id</a></h3>
+      <h3>GET <a href="https://bookshelf-api-production-b818.up.railway.app/api/books/get-one/:id" target="_blank">/books/get-one/:id</a></h3>
       <p>Returns information about a specific book by ID. <span class="note">Authentication required</span></p>
       <div class="headers">
         Header: <br>
