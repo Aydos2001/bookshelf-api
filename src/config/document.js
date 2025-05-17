@@ -79,8 +79,41 @@ export const documentApi = `
     <h1>📚 Books API Documentation</h1>
     <p>Base URL: <code>https://bookshelf-api-production-b818.up.railway.app/api</code></p>
   </header>
+    <section>
+  <h2>Users</h2>
 
-  <section>
+  <div class="endpoint">
+    <h3>POST <a href="https://bookshelf-api-production-b818.up.railway.app/api/users/register" target="_blank">/users/register</a></h3>
+    <p>Register a new user. No authentication required.</p>
+    <pre>{
+    "userName" : "John Doe",
+    "password" : "qwerty123"
+}</pre>
+    <p>Returns:</p>
+    <pre>{
+        "id": "6825b6beb89bfa99ef05ec39",
+        "userName": "John Doe"
+}</pre>
+  </div>
+
+  <div class="endpoint">
+    <h3>POST <a href="https://bookshelf-api-production-b818.up.railway.app/api/users/login" target="_blank">/users/login</a></h3>
+    <p>Login a new user. No authentication required.</p>
+    <pre>{
+    "userName" : "John Doe",
+    "password" : "qwerty123"
+}</pre>
+    <p>Returns:</p>
+    <pre>{
+  "user": {
+        "id": "6825b6beb89bfa99ef05ec39",
+        "userName": "John Doe"
+    },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}</pre>
+  </div>
+
+</section>
     <h2>Books</h2>
 
     <div class="endpoint">
@@ -110,24 +143,6 @@ export const documentApi = `
     "userId": "64a9fba5c7f6e91b12345678"
   }
 ]</pre>
-    </div>
-
-    <div class="endpoint">
-      <h3>GET <a href="https://bookshelf-api-production-b818.up.railway.app/api/books/get-one/:id" target="_blank">/books/get-one/:id</a></h3>
-      <p>Returns information about a specific book by ID. <span class="note">Authentication required</span></p>
-      <div class="headers">
-        Header: <br>
-        Authorization: Bearer <code>YOUR_ACCESS_TOKEN</code>
-      </div>
-      <pre>{
-  "title": "JavaScript Deep Dive",
-  "author": "Kyle Simpson",
-  "image": "https://example.com/images/js-deep-dive.jpg",
-  "published": 2020,
-  "pages": 350,
-  "status": "available",
-  "userId": "64a9fba5c7f6e91b12345678"
-}</pre>
     </div>
 
   </section>
